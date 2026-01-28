@@ -1,0 +1,14 @@
+# Secrets
+**/serviceAccountKey.json
+backend/src/main/resources/serviceAccountKey.json
+
+# Build outputs
+dist/
+node_modules/
+target/
+out/
+build/
+.gradle/
+.idea/
+*.iml
+.DS_Store

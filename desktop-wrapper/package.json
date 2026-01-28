@@ -1,0 +1,19 @@
+{
+  "name": "desktop-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package:mac": "electron-packager . 'MDP Sales Calculator' --platform=darwin --arch=x64 --out=dist --overwrite",
+    "package:win": "electron-packager . 'MDP Sales Calculator' --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-packager": "^17.1.2"
+  }
+}
