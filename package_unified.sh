@@ -24,3 +24,8 @@ cd backend
 cd ..
 
 echo "✅ Build Complete! Unified JAR is at: backend/target/sales-commission-system-0.0.1-SNAPSHOT.jar"
+
+# 4. Stage for Desktop Wrapper
+echo "🚀 Staging JAR for Desktop Wrapper..."
+cp backend/target/sales-commission-system-0.0.1-SNAPSHOT.jar desktop-wrapper/app.jar
+echo "✅ JAR copied to desktop-wrapper/app.jar"
