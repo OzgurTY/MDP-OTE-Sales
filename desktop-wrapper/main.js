@@ -55,11 +55,13 @@ function startBackend() {
     console.log('Starting backend from:', jarPath);
 
     if (fs.existsSync(jarPath)) {
-        backendProcess = spawn('java', ['-jar', jarPath]);
+        // Optimization: Reduced log level to prevent UI lag
+        backendProcess = spawn('java', ['-Dlogging.level.root=WARN', '-jar', jarPath]);
 
-        backendProcess.stdout.on('data', (data) => {
-            console.log(`Backend: ${data}`);
-        });
+        // Optimization: Disable stdout logging to prevent Electron main process flood
+        // backendProcess.stdout.on('data', (data) => {
+        //    console.log(`Backend: ${data}`);
+        // });
 
         backendProcess.stderr.on('data', (data) => {
             console.error(`Backend Error: ${data}`);
